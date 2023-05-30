@@ -1,0 +1,33 @@
+O código em questão implementa uma função chamada cardapio que recebe dois parâmetros: codigo e quantidade.
+Essa função é responsável por calcular o valor a ser pago por um determinado lanche com base no código do
+item pedido e na quantidade desejada.
+
+
+Primeiro, é definido um array chamado preco que contém os preços correspondentes aos itens do cardápio.
+
+Em seguida, é feita uma verificação para garantir que o código fornecido esteja dentro da faixa válida
+(de 100 a 600) e que seja um múltiplo de 100. Se essa verificação passar, o índice correspondente ao
+código é calculado dividindo o código por 100 e subtraindo 1. Esse índice é usado para acessar o preço
+correto no array preco.
+
+Se o índice estiver dentro dos limites do array preco, a função obterItem é chamada, passando o código
+como argumento. Essa função retorna a descrição do produto com base no código fornecido.
+
+Então, o valor total é calculado multiplicando a quantidade desejada pelo preço obtido do array preco.
+
+Por fim, uma mensagem é exibida no console, informando o número do produto, a descrição, a quantidade e o
+valor total a ser pago.
+
+Caso o código fornecido não esteja dentro da faixa válida, ou não seja um múltiplo de 100, uma mensagem de
+"Código inválido!" é exibida.
+
+A função obterItem é uma função auxiliar que recebe o código como parâmetro e utiliza uma estrutura switch
+para retornar a descrição do produto correspondente ao código. Caso o código não esteja presente nos casos definidos,
+uma string vazia é retornada.
+
+Após a definição das funções, o código faz chamadas à função cardapio com diferentes códigos
+(100, 200, 300, 400, 500, 600) e uma quantidade fixa de 5. Isso é feito para testar a função e verificar
+se os cálculos e mensagens estão corretos.
+
+A última chamada à função cardapio possui um código inválido (700), o que resultará na exibição da mensagem
+"Código inválido!" no console.
